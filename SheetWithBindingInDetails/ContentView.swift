@@ -36,7 +36,7 @@ struct SheetView: View {
         VStack {
             Text("Sheet")
             Button(action: {
-                
+                self.showsSheet = false
             }) {
                 Text("Hide sheet")
             }
