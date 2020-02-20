@@ -18,7 +18,7 @@ struct ContentView: View {
             Text("Show sheet")
         }
         .sheet(isPresented: $showSheet) {
-            SheetView()
+            SheetView(showsSheet: self.$showSheet)
         }
     }
 }
@@ -30,8 +30,17 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct SheetView: View {
+    @Binding var showsSheet: Bool
+    
     var body: some View {
-        Text("Sheet")
+        VStack {
+            Text("Sheet")
+            Button(action: {
+                
+            }) {
+                Text("Hide sheet")
+            }
+        }
     }
 }
 
